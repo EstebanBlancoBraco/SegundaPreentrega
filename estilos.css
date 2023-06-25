@@ -15,94 +15,81 @@
 }
 
     .card__barra{  
-        background-color: rgb(45, 177, 58);
+        
         display:flex;
         justify-content:end;
         
     }
   
-   .galeria{
-        
+   
+
+    .container-fluid{
+        background-color: rgb(190, 236, 130);
         width: 100%;
-        height: 1100px;
-        background-color:#42a81d;
-        display: grid;
-       grid-template-columns: 150px;
-       grid-template-rows:repeat(8, 150px) ;
-     
-    }
-   .galeriaCatalogo{
-        
-        width: 100%;
-        height: 1050px;
-        background-color:#42a81d;
-        display: grid;
-       grid-template-columns: 150px;
-       grid-template-rows:repeat(8, 150px) ;
-     
+        height: auto;
     }
     .item{
-        border: 1px solid black;
+        border: 3px solid black;
+        content: "";
+        display: block;
+        height: 450px;
+    }
+   .itemCatalogo{
+        border: 3px solid black;
+        content: "";
+        display: block;
+        height: 450px;
     }
     
    .item1{
         background-image: url(/multimedia/D_NQ_NP_2X_911252-MLA52222511090_102022-F.jpg);
-        background-position: top;
+        background-position: center;
         background-size: cover;
-        grid-column: 1/2;
-        grid-row: 1/2;
+      
     }
     .item2{
         background-image: url(/multimedia/D_NQ_NP_2X_756619-MLA51828394802_102022-F.jpg);
-        background-position: 10px 200px;
+        background-position: center;
         background-size: cover;
-        grid-column: 1/2;
-        grid-row: 2/3;
+
     }
-    .item3{
+     .item3{
         background-image: url(/multimedia/D_NQ_NP_2X_947016-MLA53670367639_022023-F.jpg);
         background-position: center;
         background-size: cover;
-      grid-column: 1/2;
-        grid-row: 3/4;
+     
     }
     .item4{
         background-image: url(/multimedia/D_NQ_NP_2X_973394-MLA54334857917_032023-F.jpg);
         background-position: center;
         background-size: cover;
-      grid-column: 1/2;
-        grid-row: 4/5;
+     
     }
     .item5{
         background-image: url(/multimedia/MATE\ ARTESANAL\ GW\ \(3\).jpg);
         background-position: center;
         background-size: cover;
-      grid-column: 1/2;
-        grid-row: 5/6;
+     
     }
     .item6{
         background-image: url(/multimedia/maxresdefault.jpg);
         background-position: 670px;
         background-size: cover;
-      grid-column: 1/2;
-        grid-row: 6/7;
+    
     }
     .item7{
         background-image: url(/multimedia/D_NQ_NP_2X_860129-MLA49621303288_042022-F.jpg);
         background-position: center;
         background-size: cover;
-      grid-column: 1/2;
-        grid-row: 7/8;
+     
     }
     .card__cuadro{
-       background-color: rgb(190, 236, 130);
-       
+        padding: 0;
+        margin:0;
+        background-color: rgb(190, 236, 130);
         font-size: 20px;
-           font-family: sans-serif; 
-          grid-column:2/3;
-           grid-row: 1/8;
-   
-            }            
+        font-family: sans-serif; 
+       }            
         
         
 
@@ -114,7 +101,7 @@
         font-size: 35px;
         text-align: center}
 
-        .card__productos{
+        .card__titulo2{
             font-family: sans-serif; 
             font-size: 30px;
             color:rgb(254, 127, 182);
@@ -173,57 +160,85 @@
             display: block;
             visibility: visible;
          }
-         #Contacto{
-            margin: 10px;
-            padding: 20px; 
-            text-align: right;
-            font-size: 30px;
-            font-family: sans-serif; 
-            position: relative;
-            right:314px;
-        }
-        .resaltar {
-            background-color: #42a81d;
-        }
-        .resaltar2 {
-            background-color: rgb(5, 90, 90);
-        }
+    
+      
         #Localizacion{
             position: relative;
+            width: auto;
+            height: 500px;
         }
     
-        #emailContacto{
-            position: relative;
-            right: 1180px;
-            top: 150px;
+       .box{
+        position: relative;
+        width: 313px;
+        height: 420px;
+        border-radius: 8px;
+        background-color: rgb(211, 255, 68);
+        overflow: hidden;
+       }
+       .box::before{
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 420px;
+        background:linear-gradient(0deg, transparent, #efac27, #efac27);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        
         }
-        #numeroTelefono{
-            position: relative;
-            right: 1150px;
-            top: 350px;
+       .box::after{
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 420px;
+        background:linear-gradient(0deg, transparent, #efac27, #efac27);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        animation-delay: -3s;
+        
         }
-        #emailContacto2{
-            font-family: sans-serif; 
-            font-size: 22px;
-            color:rgb(213, 113, 157);
-            position: relative;
-            right: 1050px;
-            top: 250px;
-    
-        }
-        #numeroTelefono2{
-            font-family: sans-serif; 
-            font-size: 22px;
-            color:rgb(213, 113, 157);
-            position: relative;
-            right:1270px;
-            top: 450px;}
-        .formulario{
-            font-family: sans-serif; 
-            text-align: left;
-        }
-    
 
+        .form{
+            
+            position: absolute;
+            inset: 2px;
+            border-radius: 8px;
+            background-color: #135626;;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+
+        }
+        input, textarea{
+            width: 100%;
+            padding: 10px;
+            outline: 0;
+        }
+        
+        button{ 
+            background-color: rgb(211, 255, 68);
+            border: none;
+            position:relative;
+        }
+        
+       @keyframes animate { 
+                 0%
+        {
+            transform: rotate(0deg );
+        }
+                 50%
+        {
+            transform: rotate(360deg );
+        }
+        
+       }
+      
+    
+     
          footer{
             
          
@@ -232,7 +247,7 @@
             display:flex;
             justify-content: end;
             font-family: sans-serif;
-            
+           
         }
         .card__redes{
             text-align: center;
@@ -245,178 +260,65 @@
         }
 
     }
-    @media only screen and (min-width: 240px){
+   @media only screen and (min-width: 240px){
         #video{
             max-width: 30%;
             border: 5px solid #135626;
         }
         }
 
-        @media only screen and (min-width: 505px){
+        @media only screen and (max-width: 400px){
+            .box{
+                position: relative;
+                width: auto;
+                height: 420px;
+                border-radius: 8px;
+                background-color: rgb(211, 255, 68);
+                overflow: hidden;
+               }
+        }
+        @media only screen and (max-width: 575px){
             #video{
                 max-width: 50%;
                 border: 5px solid #135626;
               
+                
                 }
-       
-     
-            .galeriaCatalogo{
-            
-                width: 90%;
-                height: 800px;
-                background-color:#42a81d;
-                display: grid;
-               grid-template-columns: repeat(2, 200px);
-               grid-template-rows:repeat(3, 200px) ;
-               gap: 30px;
-            }
          
           .item1{
                 background-image: url(/multimedia/D_NQ_NP_2X_911252-MLA52222511090_102022-F.jpg);
-                background-position: top;
-                background-size: cover;
-                grid-column: 1/2;
-                grid-row: 1/2;
+                background-position: center;
+                background-size: 35%;
+          
             }
             .item2{
                 background-image: url(/multimedia/D_NQ_NP_2X_756619-MLA51828394802_102022-F.jpg);
-                background-position: 0px 550px;
-                background-size: cover;
-                grid-column: 1/2;
-                grid-row: 2/3;
+                background-position: center;
+                background-size: 34%;
+           
             }
             .item3{
                 background-image: url(/multimedia/D_NQ_NP_2X_947016-MLA53670367639_022023-F.jpg);
                 background-position: center;
                 background-size: cover;
-              grid-column: 2/3;
-                grid-row: 2/3;
+         
             }
            .item4{
                 background-image: url(/multimedia/D_NQ_NP_2X_973394-MLA54334857917_032023-F.jpg);
                 background-position: center;
                 background-size: cover;
-              grid-column: 2/3;
-                grid-row: 1/2;
+            
             }
              .item5{
                 background-image: url(/multimedia/MATE\ ARTESANAL\ GW\ \(3\).jpg);
                 background-position: center;
                 background-size: cover;
-              grid-column: 1/2;
-                grid-row: 3/4;
+            
             }
            .item6{
                 background-image: url(/multimedia/maxresdefault.jpg);
                 background-position: right;
                 background-size: cover;
-              grid-column: 2/3;
-                grid-row: 3/4;
+          
             }
         }
-
-
-
-
-        
-        @media only screen and (min-width: 901px){
-            .galeria{
-        
-                width: 88%;
-                height: 1000px;
-                background-image: url(/multimedia/cartel-calmate1-3f0d77ac43cbc5cac716453830523707-640-0.jpg);
-                display: grid;
-               grid-template-columns: repeat(5, 400px) ;
-               grid-template-rows:repeat(3, 1fr) ;
-             
-            }
-            .item{
-                border: 1px solid black;
-            }
-            
-            .item1{
-                background-image: url(/multimedia/D_NQ_NP_2X_911252-MLA52222511090_102022-F.jpg);
-                background-position: -50px 450px;
-                background-size: contain;
-                grid-column: 1/1;
-                grid-row: 1/3;
-            }
-            .item2{
-                background-image: url(/multimedia/D_NQ_NP_2X_756619-MLA51828394802_102022-F.jpg);
-                background-position: 10px 560px;
-                background-size: cover;
-                grid-column: 1/1;
-                grid-row: 2/3;
-            }
-            .item3{
-                background-image: url(/multimedia/D_NQ_NP_2X_947016-MLA53670367639_022023-F.jpg);
-                background-position: center;
-                background-size: cover;
-              grid-column: 1/1;
-                grid-row: 3/3;
-            }
-            .card__cuadro{
-               background-color: rgb(190, 236, 130);
-               padding: 30px;
-                font-size: 20px;
-                   font-family: sans-serif; 
-                  grid-column:2/3;
-                   grid-row: 1/4;
-                    }     
-        
-            
-        .galeriaCatalogo{
-        
-            width: 90%;
-            height: 900px;
-            background-color:#42a81d;
-            display: grid;
-           grid-template-columns: repeat(3, 400px);
-           grid-template-rows:repeat(2, 400px) ;
-           gap: 30px;
-        }
-     
-       .item1{
-            background-image: url(/multimedia/D_NQ_NP_2X_911252-MLA52222511090_102022-F.jpg);
-            background-position: top;
-            background-size: cover;
-            grid-column: 1/2;
-            grid-row: 1/2;
-        }
-        .item2{
-            background-image: url(/multimedia/D_NQ_NP_2X_756619-MLA51828394802_102022-F.jpg);
-            background-position: 0px 550px;
-            background-size: cover;
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-        .item3{
-            background-image: url(/multimedia/D_NQ_NP_2X_947016-MLA53670367639_022023-F.jpg);
-            background-position: center;
-            background-size: cover;
-          grid-column: 2/3;
-            grid-row: 2/3;
-        }
-       .item4{
-            background-image: url(/multimedia/D_NQ_NP_2X_973394-MLA54334857917_032023-F.jpg);
-            background-position: center;
-            background-size: cover;
-          grid-column: 2/3;
-            grid-row: 1/2;
-        }
-         .item5{
-            background-image: url(/multimedia/MATE\ ARTESANAL\ GW\ \(3\).jpg);
-            background-position: center;
-            background-size: cover;
-          grid-column: 3/4;
-            grid-row: 1/2;
-        }
-       .item6{
-            background-image: url(/multimedia/maxresdefault.jpg);
-            background-position: 380px;
-            background-size: cover;
-          grid-column: 3/4;
-            grid-row: 2/3;
-        }
-    }
-    
