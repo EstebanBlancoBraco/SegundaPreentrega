@@ -1,0 +1,25 @@
+.card__barra {
+    display: flex;
+    justify-content: end;
+    background-color: $color2;
+  }
+  footer {
+    .card__barraBaja {
+      display: flex;
+      justify-content: end;
+      font-family: sans-serif;
+      background-color: $color2;
+    }
+  
+    .card__redes {
+      text-align: center;
+      font-size: 25px;
+      letter-spacing: 40px;
+    }
+  
+    .redesColor {
+      color: #efac27;
+      text-decoration: none;
+    }
+  }
+  

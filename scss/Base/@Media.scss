@@ -1,0 +1,36 @@
+@media only screen and (min-width: 240px) {
+    #video {
+      max-width: 30%;
+      border: 5px solid $color1;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .box {
+      position: relative;
+      width: auto;
+      height: 420px;
+      border-radius: 8px;
+      background-color: $color3;
+      overflow: hidden;
+    }
+  }
+  
+  @media only screen and (max-width: 575px) {
+    #video {
+      max-width: 50%;
+      border: 5px solid $color1;
+    }
+  
+    .item1 {
+      background-image: url(/multimedia/D_NQ_NP_2X_911252-MLA52222511090_102022-F.jpg);
+      background-position: center;
+      background-size: contain;
+    }
+  
+    .item2 {
+      background-image: url(/multimedia/D_NQ_NP_2X_756619-MLA51828394802_102022-F.jpg);
+      background-position: center;
+      background-size: contain;
+    }
+  }

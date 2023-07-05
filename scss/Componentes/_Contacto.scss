@@ -1,0 +1,72 @@
+#Localizacion {
+    position: relative;
+    width: auto;
+    height: 500px;
+  }
+
+/*formulario*/
+.box {
+    position: relative;
+    width: 313px;
+    height: 420px;
+    border-radius: 8px;
+    background-color: $color3;
+    overflow: hidden;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 420px;
+      background: linear-gradient(0deg, transparent, #efac27, #efac27);
+      transform-origin: bottom right;
+      animation: animate 6s linear infinite;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 420px;
+      background: linear-gradient(0deg, transparent, #efac27, #efac27);
+      transform-origin: bottom right;
+      animation: animate 6s linear infinite;
+      animation-delay: -3s;
+    }
+  }
+  
+  .form {
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background-color: $color1;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      outline: 0;
+    }
+  
+    button {
+      background-color: $color3;
+      border: none;
+      position: relative;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+  }
