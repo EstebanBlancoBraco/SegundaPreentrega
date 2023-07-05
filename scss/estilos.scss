@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$color1: #135626;
+$color2:rgba(241, 153, 0, 0.592);
+$color3:rgb(211, 255, 68);
+$color4:rgb(255, 0, 221);
+
+.card {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 10px;
+  background-image: url(/multimedia/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  border: 4px solid rgb(14, 99, 122);
+}
+
+  .card__barra {
+    display: flex;
+    justify-content: end;
+    background-color: $color2;
+  }
+
+
+.container-fluid {
+  background-color: rgba(190, 236, 130, 0.401);
+  width: auto;
+  height: auto;
+}
+
+.item {
+  border: 3px solid black;
+  content: "";
+  display: block;
+  height: 450px;
+}
+
+.itemCatalogo {
+  border: 3px solid black;
+  content: "";
+  display: block;
+  height: 450px;
+  width: 50%px;
+}
+
+.item1 {
+  background-image: url(/multimedia/D_NQ_NP_2X_911252-MLA52222511090_102022-F.jpg);
+  background-position: center;
+  background-size: cover;
+
+ 
+}
+
+.item2 {
+  background-image: url(/multimedia/D_NQ_NP_2X_756619-MLA51828394802_102022-F.jpg);
+  background-position: center;
+  background-size: cover;
+
+  
+}
+
+.card__cuadro {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(190, 236, 130, 0.4);
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.card__titulo {
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgb(14, 99, 122) 10%,
+    rgb(0, 251, 147) 50%,
+    rgb(3, 115, 97) 100%
+  );
+  border: 5px solid rgb(6, 144, 144);
+  box-shadow: inset 0 0 10px $color4;
+  font-size: 35px;
+  text-align: center;
+}
+
+.card__titulo2 {
+  font-family: sans-serif;
+  font-size: 30px;
+  color: $color4;
+  text-align: center;
+  text-decoration: underline rgba(14, 99, 122, 0.351);
+}
+
+.card__cuadro2 {
+  margin: 40px;
+  padding: 30px;
+  background-color: #42a81d;
+  font-size: 20px;
+  font-family: sans-serif;
+  border: 8px solid $color1;
+  height: auto;
+  width: auto;
+}
+
+.container {
+  width: 100%;
+  background-color: rgba(125, 255, 125, 0.4);
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: 0 0 5px rgba(0, 0, 0, 0.5);
+
+  p {
+    line-height: 1.4;
+    text-align: justify;
+  }
+}
+
+#check {
+  display: none;
+}
+
+.content {
+  display: none;
+  transition: 0.9s linear;
+}
+
+label {
+  display: inline-block;
+  margin: 10px;
+  color: rgb(2, 118, 79);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+#check:checked ~ .content {
+  display: block;
+}
+
+#check:checked ~ label {
+  visibility: hidden;
+}
+
+#check:checked ~ label:after {
+  content: "Mostrar menos";
+  display: block;
+  visibility: visible;
+}
+
+#Localizacion {
+  position: relative;
+  width: auto;
+  height: 500px;
+}
+
+.box {
+  position: relative;
+  width: 313px;
+  height: 420px;
+  border-radius: 8px;
+  background-color: $color3;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #efac27, #efac27);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #efac27, #efac27);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+  }
+}
+
+.form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background-color: $color1;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+  }
+
+  button {
+    background-color: $color3;
+    border: none;
+    position: relative;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+footer {
+  .card__barraBaja {
+    display: flex;
+    justify-content: end;
+    font-family: sans-serif;
+    background-color: $color2;
+  }
+
+  .card__redes {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 40px;
+  }
+
+  .redesColor {
+    color: #efac27;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 240px) {
+  #video {
+    max-width: 30%;
+    border: 5px solid $color1;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .box {
+    position: relative;
+    width: auto;
+    height: 420px;
+    border-radius: 8px;
+    background-color: $color3;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #video {
+    max-width: 50%;
+    border: 5px solid $color1;
+  }
+
+  .item1 {
+    background-image: url(/multimedia/D_NQ_NP_2X_911252-MLA52222511090_102022-F.jpg);
+    background-position: center;
+    background-size: contain;
+  }
+
+  .item2 {
+    background-image: url(/multimedia/D_NQ_NP_2X_756619-MLA51828394802_102022-F.jpg);
+    background-position: center;
+    background-size: contain;
+  }
+}
